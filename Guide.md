@@ -36,7 +36,15 @@ Trong 2 projects đã tạo, ta thấy 2 class mặc định là Class1.cs và U
 
 9. Push code lên repository
 
-II. Implement bài mới
+II. Tích hợp CircleCI
+
+1. Đăng nhập vào CircleCI, setup dự án và làm theo các steps (đừng chọn cái gì mang tính tự động)
+2. Thêm vào mã nguồn [file này](https://github.com/voquanghoa/NetCoreCLI/blob/master/.circleci/config.yml) (chú ý đúng đường dẫn tương ứng)
+3. Tham khảo file ReadMe.md ở [đây](https://raw.githubusercontent.com/voquanghoa/NetCoreCLI/master/Readme.md) và add vào dự án
+4. Push code lên
+5. Verify mã nguồn đã được build Success trên CircleCI
+
+III. Implement bài mới
 
 1. Đảm bảo mình đang ở nhánh master và đang được mới nhất
 
@@ -87,7 +95,7 @@ Chú ý:
 
 8. Tạo pull request từ nhánh đã chọn sang master
 
-## Cập nhật bài đã làm
+IV. Cập nhật bài đã làm
 
 1. Hoàn tất công việc hiện tại bằng cách add/commit/push hoặc dùng lệnh stash (đọc kỹ trên google trước khi dùng)
 
