@@ -1,6 +1,6 @@
-Các bước để làm bài
+# Các bước để làm bài
 
-I. Setup
+#I. Setup
 
 1. Tạo một repository tên là NetExercise trên github rồi clone về máy
 2. Tạo một empty solution có tên là NetExercise sao cho file NetExercise.sln nằm trong thư mục gốc
@@ -38,26 +38,67 @@ Trong 2 projects đã tạo, ta thấy 2 class mặc định là Class1.cs và U
 
 II. Implement bài mới
 
-1. Đảm bảo mình đang ở nhánh master mới nhất
+1. Đảm bảo mình đang ở nhánh master và đang được mới nhất
 
 ```
 git checkout master
 git pull
 ```
 
-2. Nếu bắt đầu làm một phần mới, hãy tạo thư mục tương ứng để lưu trữ code, ví dụ ở đây là Basic
+Lệnh `git checkout` dùng để chuyển sang 1 nhánh có sẵn, `git pull` là cập nhật từ remote (ở đây là github) và local
+
+2. Tạo nhánh mới tương ứng với bài chuẩn bị làm và checkout vào nhánh đó, ví dụ
+
+```
+git checkout -b add-basic-exercise-01
+```
+
+Lệnh `git chekout` với tham số `-b` là tạo ra nhánh mới và checkout vào nhánh mới đó
+
+3. Nếu bắt đầu làm một phần mới, hãy tạo thư mục tương ứng để lưu trữ code, ví dụ ở đây là Basic
 
 ![8](imgs/8.png)
 
-3. Tạo file class với mã nguồn tương ứng để giải
+4. Tạo file class với mã nguồn tương ứng để giải
 
 ![9](imgs/9.png)
 
 ![10](imgs/10.png)
 
-4. Chạy UnitTest bằng cách right click lên class test (Ở đây là Exercise01Test) và chọn Run Unit Test
+5. Chạy UnitTest bằng cách right click lên class test (Ở đây là Exercise01Test) và chọn Run Unit Test
    ![11](imgs/11.png)
 
-5. Đảm bảo tất cả các test case đều pass
+6. Đảm bảo tất cả các test case đều pass
 
 ![12](imgs/12.png)
+
+7. Đưa phần đã làm lên remote (Các thao tác này nên dùng source tree để thực hiện)
+
+```
+git add *
+git commit -m "Add basic exercise 01"
+git push
+```
+
+Chú ý:
+
+- Thao tác `git add *` là xác nhận tất cả các sửa đổi ở tất cả các file. Nên dùng source tree để xem danh sách sửa đổi để tránh thêm nhầm
+- Trước khi chạy `git add *`, có thể sử dụng `git status` để xem trước thay đổi
+
+8. Tạo pull request từ nhánh đã chọn sang master
+
+## Cập nhật bài đã làm
+
+1. Hoàn tất công việc hiện tại bằng cách add/commit/push hoặc dùng lệnh stash (đọc kỹ trên google trước khi dùng)
+
+2. Chuyển sang nhánh của bài cần cập nhật bằng thao tác
+
+```
+git checkout add-basic-exercise-01
+```
+
+Không có tham số `-b` vì mình không tạo ra nhánh mới
+
+3. Sửa chữa bài làm theo comment, sau đó đấy lên github add/commit/push
+
+4. Reply comment `Done` hoặc trả lời rõ ràng, đặt câu hỏi
