@@ -1,6 +1,6 @@
 # Các bước để làm bài
 
-#I. Setup
+## I. Setup
 
 1. Tạo một repository tên là NetExercise trên github rồi clone về máy
 2. Tạo một empty solution có tên là NetExercise sao cho file NetExercise.sln nằm trong thư mục gốc
@@ -36,7 +36,7 @@ Trong 2 projects đã tạo, ta thấy 2 class mặc định là Class1.cs và U
 
 9. Push code lên repository
 
-II. Tích hợp CircleCI
+## II. Tích hợp CircleCI
 
 1. Đăng nhập vào CircleCI, setup dự án và làm theo các steps (đừng chọn cái gì mang tính tự động)
 2. Thêm vào mã nguồn [file này](https://github.com/voquanghoa/NetCoreCLI/blob/master/.circleci/config.yml) (chú ý đúng đường dẫn tương ứng)
@@ -44,7 +44,7 @@ II. Tích hợp CircleCI
 4. Push code lên
 5. Verify mã nguồn đã được build Success trên CircleCI
 
-III. Implement bài mới
+## III. Implement bài mới
 
 1. Đảm bảo mình đang ở nhánh master và đang được mới nhất
 
@@ -95,7 +95,7 @@ Chú ý:
 
 8. Tạo pull request từ nhánh đã chọn sang master
 
-IV. Cập nhật bài đã làm
+## IV. Cập nhật bài đã làm
 
 1. Hoàn tất công việc hiện tại bằng cách add/commit/push hoặc dùng lệnh stash (đọc kỹ trên google trước khi dùng)
 
